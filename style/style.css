@@ -1,0 +1,468 @@
+ body {
+     margin: 0;
+     padding: 0;
+     background-color: #121212;
+     color: #fff;
+     font-family: 'Kanit', sans-serif;
+ }
+
+ #navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 40px;
+     background-color: #1E1E1E;
+     position: relative;
+ }
+
+ .logo a {
+     color: #fff;
+     text-decoration: none;
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 35px;
+     letter-spacing: 2px;
+ }
+
+ .links {
+     display: flex;
+     gap: 25px;
+ }
+ .font-bitcount{
+    font-family: "Bitcount Grid Single";
+    font-size: 30px;
+    color: #d9f365;
+ }
+
+ .links a {
+     position: relative;
+     color: #fff;
+     text-decoration: none;
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 1.3rem;
+     letter-spacing: 1px;
+     padding: 5px 0;
+ }
+
+ .links a::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 0;
+     height: 2px;
+     background-color: #d9f365;
+     transition: width 0.3s ease-in-out 0.1s;
+ }
+
+ .links a:hover::after {
+     width: 100%;
+ }
+
+ .hamburger {
+     display: none;
+     flex-direction: column;
+     cursor: pointer;
+     gap: 6px;
+     z-index: 1001;
+ }
+
+ .hamburger span {
+     width: 30px;
+     height: 3px;
+     background: #fff;
+     border-radius: 3px;
+     transition: all 0.3s ease;
+ }
+
+ .hamburger.active span:nth-child(1) {
+     transform: rotate(45deg) translate(9px, 9px);
+ }
+
+ .hamburger.active span:nth-child(2) {
+     opacity: 0;
+ }
+
+ .hamburger.active span:nth-child(3) {
+     transform: rotate(-45deg) translate(9px, -9px);
+ }
+
+ .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100vh;
+     background: rgba(0, 0, 0, 0.7);
+     opacity: 0;
+     visibility: hidden;
+     transition: all 0.3s ease;
+     z-index: 998;
+ }
+
+ .overlay.active {
+     opacity: 1;
+     visibility: visible;
+ }
+
+ #herosection {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 80px 40px;
+ }
+
+ .writings {
+     max-width: 50%;
+ }
+
+ .big-font {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 80px;
+     margin-bottom: 1rem;
+     line-height: 1.2;
+ }
+ .font-bebas{
+    font-family: "Bebas Neue";
+ }
+
+ .font-manrope{
+    font-family: "Manrope";
+ }
+
+ .font-kanit {
+     font-size: 18px;
+     margin-bottom: 2rem;
+ }
+
+ .buttons {
+     display: flex;
+     align-items: center;
+ }
+
+ .buttons a {
+     margin-right: 10px;
+     display: inline-block;
+ }
+
+ #download-cv {
+     background-color: #d9f365;
+     color: #000;
+     padding: 10px 50px 10px 20px;
+     border-radius: 20px;
+     text-decoration: none;
+     font-weight: bold;
+     position: relative;
+     display: inline-block;
+ }
+
+ #download-cv::after {
+     content: '→';
+     position: absolute;
+     right: 10px;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 20px;
+     width: 32px;
+     height: 32px;
+     background-color: #000;
+     color: #d9f365;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     line-height: 1;
+     padding-left: 2px;
+     transition: transform 0.3s ease;
+ }
+
+ #download-cv:hover::after {
+     transform: translateY(-50%) translateX(5px);
+ }
+
+ .photo img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+ #mid {
+     padding: 80px 40px;
+ }
+
+ #project-heading {
+     margin-bottom: 40px;
+ }
+
+ .featured-project {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 60px;
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+
+ .pro-para {
+    font-family: "Manrope";
+     font-size: 18px;
+     color: #C7C7C7;
+ }
+
+ #cards {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 40px;
+ }
+
+ .card {
+     background-color: #1E1E1E;
+     border-radius: 10px;
+     overflow: hidden;
+ }
+
+ .project-image img {
+     width: 100%;
+     height: auto;
+     border-bottom: 1px solid #444;
+ }
+
+ .project-info {
+     padding: 20px;
+ }
+
+ .project-info h3 {
+     font-size: 24px;
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+
+ .project-info p {
+     font-size: 16px;
+     color: #C7C7C7;
+     margin-bottom: 20px;
+ }
+
+ .project-details {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 20px;
+ }
+
+ .project-links a {
+     color: #d9f365;
+     text-decoration: none;
+     margin-right: 20px;
+ }
+
+ .about-me {
+     padding: 80px 40px;
+     background-color: #1E1E1E;
+ }
+
+ .about-me-content {
+     display: flex;
+     gap: 40px;
+ }
+
+ .about-me h2 {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 60px;
+     font-weight: bold;
+     margin-bottom: 20px;
+ }
+
+ .about-me-text p {
+     font-size: 16px;
+     color: #C7C7C7;
+     margin-bottom: 20px;
+ }
+
+ .more-about-me {
+     color: #d9f365;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ #contact {
+     padding: 80px 40px;
+ }
+
+ .contact-content {
+     display: flex;
+     justify-content: space-between;
+     gap: 40px;
+ }
+
+ .contact-text h2 {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 60px;
+     font-weight: bold;
+     margin-bottom: 20px;
+ }
+
+ .contact-text p {
+     font-size: 18px;
+     color: #C7C7C7;
+     margin-bottom: 10px;
+ }
+
+ .contact-text a {
+     color: #d9f365;
+     text-decoration: none;
+ }
+
+ .social-links a {
+     margin-right: 15px;
+     font-size: 24px;
+     color: #fff;
+ }
+
+ .contact-form label {
+     display: block;
+     margin-bottom: 5px;
+ }
+
+ .contact-form input,
+ .contact-form textarea {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 20px;
+     background-color: #1E1E1E;
+     border: 1px solid #444;
+     border-radius: 5px;
+     color: #fff;
+ }
+
+ .contact-form button {
+     background-color: #d9f365;
+     color: #000;
+     padding: 10px 20px;
+     border-radius: 20px;
+     text-decoration: none;
+     font-weight: bold;
+     border: none;
+     cursor: pointer;
+ }
+
+ #capabilities,
+ #experience {
+     padding: 80px 40px;
+ }
+
+ #capabilities h2,
+ #experience h2 {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 60px;
+     font-weight: bold;
+     margin-bottom: 20px;
+ }
+
+ .skills-container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 15px;
+     margin-top: 20px;
+ }
+
+ .skill {
+     background-color: #1E1E1E;
+     border: 1px solid #444;
+     border-radius: 20px;
+     padding: 10px 20px;
+     font-size: 16px;
+ }
+
+ .experience-item {
+     margin-bottom: 40px;
+ }
+
+ .experience-item h3 {
+     font-size: 24px;
+     font-weight: bold;
+     margin-bottom: 5px;
+ }
+
+ .experience-item .date {
+     font-size: 16px;
+     color: #C7C7C7;
+     margin-bottom: 10px;
+ }
+
+ .experience-item a .company {
+     font-size: 18px;
+     font-weight: bold;
+     color: #d9f365;
+     margin-bottom: 10px;
+
+    }
+
+    .experience-item a {
+        /* text-decoration: none; */
+        color: white;   
+    }
+
+ /* Mobile Styles */
+ @media (max-width: 768px) {
+     .hamburger {
+         display: flex;
+     }
+
+     .links {
+         position: fixed;
+         top: 0;
+         right: -100%;
+         width: 300px;
+         height: 100vh;
+         background: #1E1E1E;
+         flex-direction: column;
+         padding: 80px 2rem 2rem;
+         gap: 1.5rem;
+         transition: right 0.3s ease;
+         z-index: 999;
+         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+     }
+
+     .links.active {
+         right: 0;
+     }
+
+     .links a::after {
+         display: none;
+     }
+
+     #herosection {
+         flex-direction: column;
+     }
+
+     .writings,
+     .photo {
+         max-width: 100%;
+     }
+
+     .photo {
+         margin-top: 2rem;
+     }
+
+     .card {
+         flex-direction: column;
+     }
+
+     .project-image {
+         margin-right: 0;
+         margin-bottom: 2rem;
+     }
+
+     .about-me-content {
+         flex-direction: column;
+     }
+
+     .about-me h2 {
+         margin-bottom: 1rem;
+     }
+
+     .contact-content {
+         flex-direction: column;
+     }
+
+     .contact-text {
+         margin-bottom: 2rem;
+     }
+ }
