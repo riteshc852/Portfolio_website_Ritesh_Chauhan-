@@ -9,7 +9,7 @@ def index():
         email = request.form['email']
         print(name)
         print(email)
-    return render_template("/Portfolio_website_final/index.html")
+    return render_template("index.html")
 
 
 if __name__ == "__main__" :
