@@ -156,11 +156,11 @@
  }
 
  #download-cv::after {
-     content: '→';
+     content: '↓';
      position: absolute;
      right: 10px;
-     top: 50%;
-     transform: translateY(-50%);
+     top: 10%;
+     transform: translateY(10%);
      font-size: 20px;
      width: 32px;
      height: 32px;
@@ -176,7 +176,7 @@
  }
 
  #download-cv:hover::after {
-     transform: translateY(-50%) translateX(5px);
+     transform: translateY(6px);
  }
 
  .photo img {
